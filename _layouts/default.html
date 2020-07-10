@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- purecss stuff -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- my styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    {% feed_meta %}
+    {% seo %}
+  </head>
+  <body>
+    {% include navigation.html %}
+    <div class="content main" id="myContent" >
+      {{ content }}
+    </div>
+  </body>
+</html>
+<script>
+  let content = document.getElementById("myContent");
+  function getOffsetTop() {
+    let items = document.getElementsByClassName("menuItem");
+    let offsets = [];
+    
+    for(let i=0; i < items.length; i++) {
+      offsets.push(items[i].offsetTop);
+    }
+    let maxOffset = Math.max.apply( Math, offsets );
+      if(maxOffset > 64){
+        content.className = "content tripleMenu";
+      } else if (maxOffset > 0) {
+        content.className = "content doubleMenu";
+      } else {
+        content.className = "content";
+      }
+    }
+
+  window.onload = function() {
+    getOffsetTop();
+  }
+  
+  window.addEventListener('resize',() => {
+    getOffsetTop();
+  });
+</script>

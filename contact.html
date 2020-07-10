@@ -1,0 +1,25 @@
+---
+title: Contact
+
+---
+<form id="myform" onsubmit="emailjs.sendForm('default_service', 'template_klFXnOEm', this); return false;" method="post">
+      <label>Email</label>
+      <input type="text" name="user_email" />
+      <label>Message</label>
+      <textarea name="message"></textarea>
+      <!-- H o n e y p o t -->
+      <label class="ohnohoney" for="name"></label>
+      <input class="ohnohoney" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
+      <label class="ohnohoney" for="email"></label>
+      <input class="ohnohoney" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
+      <button>
+      Send
+      </button>
+</form>
+      
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+      (function(){
+         emailjs.init("user_9zebsEJVTakFQHE0CDnXT");
+      })();
+</script>
