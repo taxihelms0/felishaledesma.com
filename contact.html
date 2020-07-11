@@ -12,10 +12,7 @@ title: Contact
       <input class="ohnohoney" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here">
       <label class="ohnohoney" for="email"></label>
       <input class="ohnohoney" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
-      <button class="g-recaptcha" 
-        data-sitekey="6LerF7AZAAAAAM36HkaE3HsuwttiLbStqY_VmOgs" 
-        data-callback='onSubmit' 
-        data-action='submit'>Send</button>
+      <button>Send</button>
 </form>
     
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
@@ -26,7 +23,6 @@ title: Contact
       })();
 </script>
 <script type="text/javascript" src="/assets/js/form.js"> </script>
-<script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
       function onSubmit(token) {
         document.getElementById("myform").submit();
