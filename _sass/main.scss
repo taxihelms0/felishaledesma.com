@@ -29,12 +29,16 @@ body {
   //padding: 1rem;
 }
 
-.content ul, p{
+.content ul, p {
   padding-inline-start:0rem;
   // padding-left:1rem;
   // padding-right:1rem;
   margin-right:0;
   margin-left:0;
+}
+
+.content form input, textarea{
+  font-size:125%;
 }
 
 // links
@@ -82,7 +86,6 @@ a:hover {
 .excerpt p {
   display:inline;
   padding:0 1rem 0 1rem;
-  
 }
 
 /* end global stuff */
@@ -167,12 +170,20 @@ a:hover {
 /* end nav styling */
 
 /* begin blog listing style */
+li.blogPost {
+  display:block;
+  text-align: left;
+  // text-justify: inter-word;
+
+  // margin-right:auto;
+  // margin-left:auto;
+}
 
 /* end blog listing style */
 
 /* begin form stuff */
 form {
-  width:33%;
+  width:500px;
   margin-left:auto;
   margin-right:auto;
   display:block;
@@ -180,18 +191,19 @@ form {
   padding-top:1.25rem;
   padding-inline-start:0;
   margin-top:2rem;
-  
 }
+
 
 form input {
   //padding: 1rem;
   border-width:1px;
   border-color:black;
-  padding-top:1rem;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  
   // margin-left:auto;
   // margin-right:auto;
   width: 75%;
-  height: 15px;
   display: block;
 }
 
@@ -201,10 +213,19 @@ form label, button{
 }
 
 form button {
-  height: 50px;
-  width: 75px;
-  border-radius: 5px;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  width: 80px;
+  font-size:100%;
+  // border-radius: 5px;
+  background-color:#f0f0f0;
+  border-width:1px;
+  border-color:black;
+}
+
+form button:hover {
   background-color:$highlight-color;
+  cursor:pointer;
 }
 
 textarea {
@@ -225,4 +246,6 @@ textarea {
   width: 0;
   z-index: -1;
 }
+
+
 /* end form stuff */

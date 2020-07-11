@@ -19,18 +19,21 @@ title: Works
   <ul>
     {% for post in site.posts %}
       <li class="blogPost">
+        <span class="date">{{ post.date | date_to_string }}</span> 
         <a href="{{ post.url }}">{{ post.title }}</a>
         <span class="excerpt">
-        {{ post.excerpt }}
+        {{ post.excerpt }} 
         </span>
-        {% if post.category=='audio' and post.media_file %}
+        
+        
+        <!-- {% if post.category=='audio' and post.media_file %} -->
         <!-- <div>
         <audio controls style="width:50%">
           <source src="{{ post.media_file }}">
         Your browser does not support the audio element.
         </audio>
         </div> -->
-        {% endif %}
+        <!-- {% endif %} -->
 
       </li>
     {% endfor %}
