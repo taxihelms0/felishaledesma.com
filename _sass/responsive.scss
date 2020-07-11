@@ -51,13 +51,19 @@
   /* Form resize for small screens */
   form {
     width:85%;
-    font-size:125%;
+    box-sizing:border-box;
   }
   
   form button, input{
-    width:100%!important;
+    width:85%!important;
     vertical-align:center;
   }
+
+  form textarea {
+    height:200px;
+    width:85%!important
+  }
+
   form button {
     font-size:1.25rem;
   }
