@@ -54,20 +54,24 @@ displays links in vertial list */
   /* Form resize for small screens */
   form {
     width:85%;
-    box-sizing:border-box;
+    // box-sizing:content-box;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
   }
   
-  form button, input{
-    width:85%!important;
-    vertical-align:center;
+  form button, input, label{
+    width:90%!important;
+    // vertical-align:center;
   }
 
   form textarea {
     height:200px;
-    width:85%!important
+    width:90%!important
   }
 
   form button {
     font-size:1.25rem;
+    width:auto;
   }
 }
