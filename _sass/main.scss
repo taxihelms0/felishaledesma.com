@@ -147,6 +147,7 @@ a:hover {
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
+  padding-left:0;
 }
 /* adjust content height to account for nav */
 .content { // default height
