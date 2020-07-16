@@ -20,7 +20,4 @@ plugins:
   - jekyll-environment-variables
   - jekyll-menus
 
-# variables
-form_key: {{ site.env.STATICFORMS_KEY }}
-
-name: "Site Name"
+title: "Felisha Ledesma"
