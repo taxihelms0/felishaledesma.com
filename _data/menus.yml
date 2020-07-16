@@ -1,7 +1,7 @@
 navigation:
-  - title: Felisha Ledesma
-    url: /
-    identifier: home
+  # - title: Felisha Ledesma
+  #   url: /
+  #   identifier: home
   - title: About
     url: /about.html
     identifier: about

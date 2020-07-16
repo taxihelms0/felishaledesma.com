@@ -1,5 +1,6 @@
 <nav class="topnav" id="myTopnav">
   <ul id="menuList">
+    <a href="/" id="brand">{{ site.title }}</a>
     {% for item in site.menus.navigation %}
     <a href="{{ item.url }}" {% if item.url == '/' %} id="brand"{% endif %}class="{% if page.url == item.url %}current {% endif %}menuItem">{{ item.title }}</a>
     {% endfor %}
