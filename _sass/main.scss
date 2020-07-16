@@ -254,3 +254,26 @@ textarea {
 
 
 /* end form stuff */
+
+/* media gallery stuff */
+.grid-container {
+  display:block;
+  padding-left:1rem;
+  padding-right:1rem;
+}
+.gallery .grid-item{
+  width:33%;
+  // height:auto;
+  display:inline-block;
+}
+
+// .gallery .images {
+//   display:inline-block;
+// }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* end media gallery stuff */

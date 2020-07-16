@@ -2,7 +2,7 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
-<div class="gallery">
+<div class="gallery grid-container">
   {% for media_file in page.media_files %}
   {% if media contains ".mp3" %}
   <audio controls>
@@ -10,17 +10,18 @@ layout: default
   Your browser does not support the audio element.
   </audio>
   {% else if media_file contains ".jpg" or media contains ".jpeg" %}
-  contains jpeg
-  {% assign crumbs = media_file | split: '/' %}
-  {% for crumb in crumbs offset: 1 %}
-  crumb {{ crumb }}
-    {% if forloop.last %}
-      {% assign fileNameParts = crumb | split: '.' %}
-      {% assign fileName = fileNameParts[0] %}
-      <h1>filename: {{ fileName | replace:'_',' ' | replace:'-',' ' | capitalize }}</h1>
-    {% endif %}
-  {% endfor %}
-  <img src="{{ media_file }}" alt="{{ fileName }}">
+  
+    {% assign crumbs = media_file | split: '/' %}
+    {% for crumb in crumbs offset: 1 %}
+      {% if forloop.last %}
+        {% assign fileNameParts = crumb | split: '.' %}
+        {% assign fileName = fileNameParts[0] %}
+      {% endif %}
+    {% endfor %}
+    <div class="grid-item">
+      <img src="{{ media_file }}" alt="{{ fileName | replace:'_',' ' | replace:'-',' ' | capitalize }}">
+    </div>
+  
   {% endif %}
   {% endfor %}
 </div>
