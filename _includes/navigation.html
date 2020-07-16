@@ -1,7 +1,7 @@
 <nav class="topnav" id="myTopnav">
   <ul id="menuList">
-    {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if item.link == '/' %} id="brand"{% endif %}class="{% if page.url == item.link %}current {% endif %}menuItem">{{ item.name }}</a>
+    {% for item in site.menus.navigation %}
+    <a href="{{ item.url }}" {% if item.url == '/' %} id="brand"{% endif %}class="{% if page.url == item.url %}current {% endif %}menuItem">{{ item.title }}</a>
     {% endfor %}
     <a href="javascript:void(0);" class="icon" onclick="dropDown()">
       <i class="fa fa-bars"></i>

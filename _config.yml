@@ -18,6 +18,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-environment-variables
+  - jekyll-menus
 
 # variables
 form_key: {{ site.env.STATICFORMS_KEY }}
