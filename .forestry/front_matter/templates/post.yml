@@ -5,12 +5,25 @@ fields:
 - type: text
   name: title
   label: title
-- type: datetime
-  name: date
+- name: date
+  type: datetime
   label: date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
 - type: text
   name: category
   label: category
 - type: text
-  name: media_file
+  name: media_file_old
   label: media_file
+  hidden: true
+- name: media_files
+  type: image_gallery
+  config: {}
+  label: media file(s)
+  description: upload media file(s) here
