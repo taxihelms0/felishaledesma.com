@@ -112,10 +112,14 @@ displays links in vertial list */
   }
   #toggleContact {
     position:fixed;
+    cursor:pointer;
     bottom:0;
     right:0;
     z-index:101;
     margin-right:1rem;
     margin-bottom:0.5rem;
+  }
+  #toggleContact:hover {
+    background-color:$highlight-color;
   }
 }
