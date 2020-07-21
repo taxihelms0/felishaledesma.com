@@ -1,4 +1,6 @@
-
+---
+title: Contact
+---
 <form id="myform" data-lpignore="true">
   <label class="formTitle">Contact Me:</label>
   <label>Email</label>
@@ -12,28 +14,6 @@
   <input class="ohnohoney" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
   <button>Send</button>
 </form>
-<div id='contact-footer'>
-  <span id='toggleContact'><noscript><a href="/contact.html"></noscript>contact<noscript></a></noscript></span>
-</div>
-
-
-
-<script type="text/javascript">
-  const contactButton = document.querySelector('#toggleContact');
-  const contactForm = document.querySelector('#myform');
-  contactButton.addEventListener('click', toggleForm);
-  function toggleForm() {
-    if (contactForm.style.maxHeight !== '900px') {
-      contactForm.style.maxHeight = '900px';
-    } else {
-      contactForm.style.maxHeight = '0';
-    }
-    
-  }
-
-  
-  
-</script>
     
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>

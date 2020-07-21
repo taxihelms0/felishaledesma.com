@@ -15,6 +15,8 @@ $font-family-sans-serif:
 
 $highlight-color: #DEFF00;
 $link-color: black;
+$text-color: black;
+$page-color: white;
 
 /* end vars */
 
@@ -26,6 +28,7 @@ $link-color: black;
 body {
   line-height:1.25;
   margin:0px;
+  font-size:125%;
   //padding: 1rem;
 }
 
@@ -35,10 +38,6 @@ body {
   // padding-right:1rem;
   margin-right:0;
   margin-left:0;
-}
-
-.content form input, textarea{
-  font-size:125%;
 }
 
 // links
@@ -158,6 +157,7 @@ a:hover {
   // top:8px;
   // right:8px;
   margin-top: 4rem;
+  padding-bottom:2.5rem;
 }
 .doubleMenu {
   margin-top: 8rem!important;
@@ -190,14 +190,17 @@ li.blogPost {
 .info .right {
   display:inline-block;
   right:0;
-  width:40%;
   position:fixed;
+  margin-left:auto;
+  margin-right:auto;
+  width:50%
+  // text-align:center;
 }
 
 .info .left {
   display:inline-block;
   left:0;
-  width:60%;
+  width:50%;
   
 }
 
@@ -213,14 +216,68 @@ li.blogPost {
 /* end info page styling */
 
 /* begin form stuff */
-form .input, textarea, button, label{
+form {
+  width:400px;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  text-align:left;
+  padding-top:1.25rem;
+  padding-inline-start:0;
+  margin-top:2rem;
+}
+
+.content form input, textarea{
+  font-size:125%;
+}
+
+form input {
+  //padding: 1rem;
+  border-width:1px 1px 1px 1px;
+  border-color:$text-color;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  // background-color:#101010;
+  
+  // margin-left:auto;
+  // margin-right:auto;
+  width: 75%;
+  display: block;
+}
+
+form label, button{
+  margin-top:0.5rem;
   display:block;
 }
 
-textarea {
-  height:300px;
+form button {
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  width: 80px;
+  font-size:100%;
+  // border-radius: 5px;
+  // background-color:#101010;
+  border-width:1px;
+  border-color:$text-color;
+  color:$text-color;
+
 }
-/* dummy stuff */
+
+form button:hover {
+  background-color:$highlight-color;
+  cursor:pointer;
+}
+
+textarea {
+  display:block;
+  width: 100%;
+  height:275px;
+  margin-bottom:2px;
+  border-width:1px;
+  border-color:$text-color;
+  background-color: $page-color;
+}
+
 .ohnohoney{
   opacity: 0;
   position: absolute;
@@ -231,7 +288,9 @@ textarea {
   z-index: -1;
 }
 
-
+#showContact {
+  display:none;
+}
 /* end form stuff */
 
 // /* media gallery stuff */
