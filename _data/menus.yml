@@ -2,12 +2,12 @@ navigation:
   # - title: Felisha Ledesma
   #   url: /
   #   identifier: home
-  - title: About
-    url: /about.html
-    identifier: about
-  - title: Works
-    url: /works.html
-    identifier: works
-  - title: Contact
-    url: /contact.html
-    identifier: contact
+  - title: Info
+    url: /info.html
+    identifier: info
+  # - title: Works
+  #   url: /works.html
+  #   identifier: works
+  # - title: Contact
+  #   url: /contact.html
+  #   identifier: contact
