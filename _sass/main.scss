@@ -182,67 +182,45 @@ li.blogPost {
 
 /* end blog listing style */
 
-/* begin form stuff */
-form {
-  width:500px;
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-  text-align:left;
-  padding-top:1.25rem;
-  padding-inline-start:0;
-  margin-top:2rem;
-  box-sizing: border-box;
+/* info page styling */
+// .container.info {
+  
+// }
+
+.info .right {
+  display:inline-block;
+  right:0;
+  width:40%;
+  position:fixed;
 }
 
-
-form input {
-  //padding: 1rem;
-  border-width:1px;
-  border-color:black;
-  padding-top:0.5rem;
-  padding-bottom:0.5rem;
-  width: 75%;
-  // display: block;
-  box-sizing:border-box;
+.info .left {
+  display:inline-block;
+  left:0;
+  width:60%;
   
 }
 
-form label{
-  margin-right:auto;
-  margin-left:auto;
-  margin-top:0.5rem;
+#contact-footer {
+  width:100%;
+  background-color:white;
+  display:none;
+  position:fixed;
+  bottom:0;
+  text-align:right;
+}
+
+/* end info page styling */
+
+/* begin form stuff */
+form .input, textarea, button, label{
   display:block;
-  text-align:left;
-}
-
-form button {
-  padding:0.5rem;
-  width: 80px;
-  font-size:100%;
-  // border-radius: 5px;
-  background-color:#f0f0f0;
-  border-width:1px;
-  // border-color:black;
-  // box-sizing: content-box;
-  display: inline-block;
-}
-
-form button:hover {
-  background-color:$highlight-color;
-  cursor:pointer;
 }
 
 textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom:2px;
-    border-width:1px;
-    border-color:black;
-    height:275px;
-    box-sizing:border-box;
+  height:300px;
 }
-
+/* dummy stuff */
 .ohnohoney{
   opacity: 0;
   position: absolute;
