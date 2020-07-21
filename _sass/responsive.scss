@@ -11,6 +11,10 @@
     // padding-bottom:auto;
   }
   .topnav #brand {
+    display:none;
+  }
+  .topnav #brandMobile {
+    display:inherit;
     margin-right:0;
     // margin-left:1rem!important;
     background-color:white!important;
@@ -77,8 +81,6 @@ displays links in vertial list */
 }
 
 @media screen and (max-width:900px) {
-
-  
 
   .info .left {
     width:100%;
