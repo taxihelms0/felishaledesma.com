@@ -1,38 +1,84 @@
-<!-- this is for separating post types <ul>
+<div class="container">
   {% for post in site.posts %}
-  {% if post.category=='audio' %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <p>{{ post.excerpt }}</p>
-      {% if post.category %}
-      <p>{{ post.category | downcase }}</p>
-      {% endif %}
-    </li>
-  {% endif %}
-
+    <div class="grid-container hoverable" id="{{ post.title | slugify }}">
+      <div class="grid-item post-title">{{ post.title }}</div>
+      <div class="grid-item post-excerpt">{{ post.excerpt | strip_html }}</div>
+      <div class="grid-item post-date">{{ post.date | date_to_string }}</div>
+    </div>
+    <div class="section collapsible collapsed" id ="{{ post.title | slugify }}-content">
+      {% if post.excerpt contains "://" %}{{ post.content }}{% else %}{{ post.content | remove_first: post.excerpt }}{% endif %}
+    </div>
+    <!-- <div id ="{{ post.title }}-content" class="grid-container post-content">
+      <div class="grid-item">
+        {% if post.excerpt contains "://" %}{{ post.content }}{% else %}{{ post.content | remove_first: post.excerpt }}{% endif %}
+      </div>
+    </div> -->
   {% endfor %}
-</ul>-->
-<blog>
-  <ul>
-    {% for post in site.posts %}
-      <li class="blogPost">
-        <span class="date">{{ post.date | date_to_string }}</span> 
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="excerpt">
-        {{ post.excerpt }} 
-        </span>
-        
-        
-        <!-- {% if post.category=='audio' and post.media_file %} -->
-        <!-- <div>
-        <audio controls style="width:50%">
-          <source src="{{ post.media_file }}">
-        Your browser does not support the audio element.
-        </audio>
-        </div> -->
-        <!-- {% endif %} -->
+</div>
 
-      </li>
+
+
+<script>
+
+  const postTogglers = document.querySelectorAll('div.hoverable');
+  // console.log(postTogglers);
+  postTogglers.forEach((postToggler) => {
+    // for each we add a 'click' listener
+    console.log(`${postToggler.id}-content`);
+    postToggler.addEventListener('click', () => {
+      document.querySelector(`#${postToggler.id}-content`).classList.toggle('collapsed'); 
+    });
+  });
+
+
+
+  // Look ma, [very little] Javascript!
+  // document.querySelector('#toggle-button').addEventListener('click', function() {
+  //   document.querySelector('.section.collapsible').classList.toggle('collapsed');
+  //   console.log(document.querySelector('.section.collapsible').classList)
+  // });
+</script>
+
+<!-- <script>
+  let posts = {
+    {% for p in site.posts %}
+      "{{ p.title }}": {
+        category: "{{ p.category }}",
+        date: "{{ p.date | date_to_string }}",
+        mediaFile: "{{ p.media_file }}",
+        excerpt: "{{ p.excerpt | strip_html | rstrip }}",
+      },
     {% endfor %}
-  </ul>
-</blog>
+  };
+  // function togglePost(postId) {
+  //   console.log(postId);
+  // }
+  function showContent(postName) {
+    console.log(postName);
+    let contentBox = document.getElementById(postName + '-content');
+    // console.log(contentBox.classList);
+    if(contentBox.classList.value.includes(" show")) {
+      contentBox.classList.remove("show");
+      contentBox.classList.add("hidden");
+      console.log("it has show");
+      console.log(contentBox.classList.value);
+    } else {
+      contentBox.classList.add("show");
+      contentBox.classList.remove("hidden");
+      console.log("it has no show")
+      console.log(contentBox.classList.value);
+    }
+  }
+  const postTogglers = document.querySelectorAll('div.hoverable');
+  console.log(postTogglers);
+  postTogglers.forEach((postToggler) => {
+    // for each we add a 'click' listener
+    postToggler.addEventListener('click', () => {
+      showContent(postToggler.id); 
+    });
+  });
+
+  
+  </script> -->
+
+  

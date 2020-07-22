@@ -174,14 +174,76 @@ a:hover {
 /* end nav styling */
 
 /* begin blog listing style */
-li.blogPost {
-  display:block;
-  text-align: left;
-  // text-justify: inter-word;
-
-  // margin-right:auto;
-  // margin-left:auto;
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  margin-left:1rem;
+  margin-right:1rem;
+  padding-top:1rem;
+  justify-content: start;
 }
+
+
+
+// .grid-container:hover {
+//   background-color:$page-background;
+//   color: $link-color;
+// }
+
+.grid-item p {
+  padding-top:0;
+}
+
+.grid-container .post-date {
+  text-align:right;
+  grid-column:3;
+  grid-row:1;
+  
+  text-decoration:underline;
+}
+
+.hoverable:hover {
+  cursor:pointer;
+  background-color:$highlight-color;
+  color:$link-color;
+}
+
+.grid-container .post-excerpt {
+  grid-column:2;
+  grid-row:1;
+  text-decoration:underline;
+
+}
+
+.grid-container .post-title {
+  cursor:pointer;
+  text-decoration:underline;
+  grid-column:1;
+  grid-row:1;
+}
+
+// .grid-container.post-content {
+  
+// }
+
+// collapsible content:
+.container {
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  height:350px; // sadly, we're required to set at least the container height explicitly
+}
+.section {
+  overflow:hidden;
+  transition:flex 0.3s ease-out; // note that we're transitioning flex, not height!
+  height:auto;
+  flex:1;
+}
+.section.collapsed {
+  flex: 0;
+}
+
+
 
 /* end blog listing style */
 
