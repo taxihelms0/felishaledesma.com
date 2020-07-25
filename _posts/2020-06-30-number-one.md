@@ -1,8 +1,8 @@
 ---
-title: number one
+title: "'The Terminator' Main Title.mp3"
 date: 2020-06-30
 category: audio
-media_file: /media/02 - 'The Terminator' Main Title.mp3
+mediaFile: /media/02 - 'The Terminator' Main Title.mp3
 ---
 Alright. Here's some stuff.
 

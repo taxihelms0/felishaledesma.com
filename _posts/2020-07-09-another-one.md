@@ -1,7 +1,8 @@
 ---
 title: another one
 date: 2020-07-09
-category: audio
+type: 
+mediaFile: 
 ---
 MORE STUFF
 
