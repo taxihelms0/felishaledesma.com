@@ -10,7 +10,7 @@ return obj;
 // Change to your service ID, or keep using the default service
 var service_id = "default_service";
 
-var template_id = "template_klFXnOEm";
+var template_id = "felisha_klFXnOEm";
 myform.find("button").text("Sending...");
 emailjs.send(service_id, template_id, params)
 .then(function() {
