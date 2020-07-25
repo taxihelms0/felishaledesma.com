@@ -1,0 +1,21 @@
+<div class="container">
+  {% for post in site.posts %}
+    <div class="grid-container hoverable" id="{{ post.title | slugify }}">
+      <div class="grid-item post-title">{{ post.title }}</div>
+      {% if post.type == audio and post.mediaFile %}
+      <div class="grid-item post-audio">
+        <audio controls>
+          <source src="{{ post.mediaFile }}" preload="auto">
+          Sorry, your browser does not support the audio player!
+        </audio>
+      </div>
+      {% else %}
+      <div class="grid-item post-excerpt">{{ post.excerpt | strip_html }}</div>
+      <!-- <div class="grid-item post-date">{{ post.date | date_to_string }}</div> -->
+      {% endif %}
+    </div>
+    <div class="section collapsible collapsed" id ="{{ post.title | slugify }}-content">
+      {% if post.excerpt contains "://" %}{{ post.content }}{% else %}{{ post.content | remove_first: post.excerpt }}{% endif %}
+    </div>
+  {% endfor %}
+</div>

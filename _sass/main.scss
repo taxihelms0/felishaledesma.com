@@ -14,9 +14,10 @@ $font-family-sans-serif:
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 $highlight-color: #DEFF00;
+
 $link-color: black;
 $text-color: black;
-$page-color: white;
+$page-background: white;
 
 /* end vars */
 
@@ -28,8 +29,12 @@ $page-color: white;
 body {
   line-height:1.25;
   margin:0px;
-  font-size:125%;
   //padding: 1rem;
+  padding-bottom:2.95rem;
+  background-color: $page-background;
+  color:$text-color;
+  letter-spacing: 0.15em;
+  // font-weight:lighter;
 }
 
 .content ul, p {
@@ -169,17 +174,17 @@ a:hover {
   margin-top: 12rem!important;
 }
 .mobileMenu {
-  margin-top: 16rem!important;
+  margin-top: 8rem!important;
 }
 /* end nav styling */
 
 /* begin blog listing style */
 .grid-container {
   display: grid;
-  grid-template-columns: 25% 50% 25%;
-  margin-left:1rem;
-  margin-right:1rem;
-  padding-top:1rem;
+  grid-template-columns: 25% 75%;
+  padding-left:1rem;
+  padding-right:1rem;
+  padding:1rem;
   justify-content: start;
 }
 
@@ -198,8 +203,7 @@ a:hover {
   text-align:right;
   grid-column:3;
   grid-row:1;
-  
-  text-decoration:underline;
+  // text-decoration:underline;
 }
 
 .hoverable:hover {
@@ -208,23 +212,37 @@ a:hover {
   color:$link-color;
 }
 
-.grid-container .post-excerpt {
+.grid-container .post-title, .post-excerpt, .post-audio, .post-date {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+
+.grid-container .post-excerpt, .post-audio {
+  // text-align:right;
   grid-column:2;
   grid-row:1;
-  text-decoration:underline;
-
+  padding-left:1rem;
+  // text-decoration:underline;
+  // display:inline-block;
+}
+audio {
+  width:75%;
 }
 
 .grid-container .post-title {
   cursor:pointer;
-  text-decoration:underline;
+  // text-decoration:underline;
   grid-column:1;
   grid-row:1;
 }
 
-// .grid-container.post-content {
-  
-// }
+.grid-container.hoverable {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  // padding-top:8px;
+  // padding-bottom:8px;
+}
 
 // collapsible content:
 .container {
@@ -340,7 +358,7 @@ textarea {
   margin-bottom:2px;
   border-width:1px;
   border-color:$text-color;
-  background-color: $page-color;
+  background-color: $page-background;
 }
 
 .ohnohoney{

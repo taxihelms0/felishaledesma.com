@@ -43,8 +43,8 @@ displays links in vertial list */
     margin-right:1rem;
   }
   .topnav.responsive a {
-    padding-left:1rem;
-    margin-left:0;
+    margin-left:1rem;
+    // margin-left:0;
     float: none;
     display: block;
     text-align: left;
@@ -53,6 +53,32 @@ displays links in vertial list */
     // padding-left:1rem;
     font-size: 3.5em;
     padding-top:0;
+  }
+  .post-title {
+    grid-column:1 / span 2;
+    grid-row:1;
+    // width:100%;
+  }
+  // posts page resize 
+  .grid-container {
+    grid-template-columns: 40% 60%;
+    padding-left:1rem;
+    padding-right:1rem;
+    // padding-top:1rem;
+    // justify-content: start;
+  }
+  .grid-container .post-excerpt, .post-audio {
+    grid-column:1 / span 2;
+    grid-row:2;
+    justify-content:flex-end;
+    // width:100%;
+  }
+  .grid-container .post-title {
+    grid-column:1 / span 2;
+    // grid-row:1;
+  }
+  audio {
+    width:100%;
   }
 
   /* Form resize for small screens */
