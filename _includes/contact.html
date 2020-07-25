@@ -13,7 +13,11 @@
   <button>Send</button>
 </form>
 <div id='contact-footer'>
-  <span id='toggleContact'><i class="fa fa-envelope-o" aria-hidden="true"></i> <noscript><a href="/contact.html"></noscript>contact<noscript></a></noscript></span>
+  
+  <span id='toggleContact'>
+    <span id='arrow'><i class="fa fa-long-arrow-up" aria-hidden="true"></i></span>
+    <i class="fa fa-envelope-o" aria-hidden="true"></i> <noscript><a href="/contact.html"></noscript>contact<noscript></a></noscript>
+  </span>
 </div>
 
 <script type="text/javascript">
@@ -23,8 +27,11 @@
   function toggleForm() {
     if (contactForm.style.maxHeight !== '516px') {
       contactForm.style.maxHeight = '516px';
+      document.querySelector('#arrow').innerHTML = '<i class="fa fa-long-arrow-down" aria-hidden="true"></i>';
     } else {
       contactForm.style.maxHeight = '0';
+      document.querySelector('#arrow').innerHTML = '<i class="fa fa-long-arrow-up" aria-hidden="true"></i>';
+      
     } 
   }
 </script>
