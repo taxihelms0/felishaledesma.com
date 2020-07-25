@@ -20,6 +20,7 @@
     background-color:white!important;
     font-size: 3.5rem;
     padding-top:0;
+    padding-left:1rem;
   }
   .topnav a.icon {
     position:fixed;
@@ -40,10 +41,12 @@ displays links in vertial list */
     position: fixed;
     right: 0;
     top: 0;
-    margin-right:1rem;
+    padding-left:0;
+    // margin-right:1rem;
   }
   .topnav.responsive a {
-    margin-left:1rem;
+    // margin-left:1rem;
+    padding-left:1rem;
     // margin-left:0;
     float: none;
     display: block;
@@ -57,6 +60,7 @@ displays links in vertial list */
   .post-title {
     grid-column:1 / span 2;
     grid-row:1;
+    margin-bottom:0.5rem;
     // width:100%;
   }
   // posts page resize 
@@ -68,6 +72,7 @@ displays links in vertial list */
     // justify-content: start;
   }
   .grid-container .post-excerpt, .post-audio {
+    padding-left:0;
     grid-column:1 / span 2;
     grid-row:2;
     justify-content:flex-end;
