@@ -17,7 +17,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-environment-variables
   - jekyll-menus
 
 title: "Felisha Ledesma"
