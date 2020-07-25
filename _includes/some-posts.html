@@ -2,7 +2,7 @@
   {% for post in site.posts %}
     <div class="grid-container hoverable" id="{{ post.title | slugify }}">
       <div class="grid-item post-title">{{ post.title }}</div>
-      {% if post.type == audio and post.mediaFile %}
+      {% if post.type == 'audio' and post.mediaFile %}
       <div class="grid-item post-audio">
         <audio controls>
           <source src="{{ post.mediaFile }}" preload="auto">
