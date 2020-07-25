@@ -118,7 +118,7 @@ a:hover {
   display: block;
   color: $link-color;
   text-align: left;
-  // margin-left:1rem;
+  padding-left:1rem;
   text-decoration: none;
   font-size: 3.5rem;
 }
@@ -130,6 +130,7 @@ a:hover {
 
 #brand {
   background-color:white;
+  padding-right:1rem;
 }
 #brandMobile {
   display:none;
