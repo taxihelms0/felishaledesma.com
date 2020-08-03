@@ -9,23 +9,22 @@
           <source src="{{ post.mediaFile }}" preload="auto">
           Sorry, your browser does not support the audio player!
         </audio> -->
-        <!-- new audio oplayer code -->
-        <div class="audioplayer">
-          <div id="{{ post.title | slugify }}" class="play">
+        <!-- new audio player code -->
+        <div class="audioplayer" id="{{ post.mediaFile }}">
+          <div id="{{ post.title | slugify }}-pButton" class="play">
             <i class="fa fa-play" aria-label="Play"></i>
           </div>
           <div id="timeline-{{ post.title | slugify }}" class="timeline">
-            <div id="playhead-{{ post.title | slugify }}" class="playhead"></div>
+            <div id="{{ post.title | slugify }}-playhead" class="playhead"></div>
           </div>
           {% if post.downloadable %}
           <div class="download-link">
             <a href="{{post.mediaFile}}" download>download</a>
           </div>
           {% endif %}
-          <audio id="{{ post.title | slugify }}-player">
-            <source = "{{ post.mediaFile }}" preload = "auto">
+          <!-- <audio id="{{ post.title | slugify }}-player" src="{{ post.mediaFile }}" preload = "auto">
               Sorry, your browser does not support the audio player!
-          </audio>
+          </audio> -->
         </div>
         <!--  -->
 
@@ -42,43 +41,38 @@
   {% endfor %}
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.js"></script>
 <script>
-  const pButtons = document.querySelectorAll('.play');
-  pButtons.forEach(pButton => {
-    pButton.addEventListener('click', () => {
-      playAudio(pButton.id); 
-    });
-  });
+  const tracks = document.querySelectorAll('.audioplayer');
 
-  function playAudio(e) {
-    const player = document.querySelector(`#${e}-player`);
-    console.log(player);
-    pButtons.forEach((pButton) => {
-      if(pButton.id === e) {
-        if (player.paused) {
-          player.play();
-          pButton.className = "";
-          pButton.className = "pause";
-          pButton.innerHTML = '<i class="fa fa-pause" aria-label="Pause"></i>';
-        } else {
-          player.pause();
-          pButton.className = "";
-          pButton.className = "play";
-          pButton.innerHTML = '<i class="fa fa-play" aria-label="Play"></i>';
-        }
-      }
-    });
+  function playButton(track) {
+    
+    
   }
 
-  // function playAudio() {
-  // if (music.paused) {
-  //   music.play();
-  //   pButton.className = "";
-  //   pButton.className = "pause";
-  // } else {
-  //   music.pause();
-  //   pButton.className = "";
-  //   pButton.className = "play";
-  // }
-// }
+  tracks.forEach(track => {
+    track.sound = new Howl({
+      src: [track.id],
+      preload: true
+    });
+    track.playButton = track.querySelector('.play');
+    track.playButton.addEventListener('click', () => {
+      if(track.sound.playing() || track.playButton.classList == 'pause'){
+        console.log('pause');
+        track.playButton.classList = "";
+        track.playButton.classList = "play";
+        track.playButton.innerHTML = '<i class="fa fa-play" aria-label="Play"></i>';
+        track.sound.pause();
+      } else {
+        console.log('play');
+        track.playButton.classList = "";
+        track.playButton.classList = "pause";
+        track.playButton.innerHTML = '<i class="fa fa-pause" aria-label="Pause"></i>';
+        track.sound.play();
+      }
+    });
+    // console.log(track.sound)
+  });
+
+  // const pButtons = document.querySelectorAll('')
 </script>
