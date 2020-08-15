@@ -207,11 +207,11 @@ a:hover {
   // text-decoration:underline;
 }
 
-.hoverable:hover {
-  // cursor:pointer;
-  // background-color:$highlight-color;
-  // color:$link-color;
-}
+// .hoverable:hover {
+//   // cursor:pointer;
+//   // background-color:$highlight-color;
+//   // color:$link-color;
+// }
 
 .grid-container .post-title, .post-excerpt, .post-audio, .post-date {
   display: flex;
@@ -263,33 +263,43 @@ audio {
 }
 
 /* audio player styling */
+.audio {
+  z-index:999;
+}
 .audioplayer {
-  display: grid;
-  grid-template-columns: 20px 400px 100px;
+  // z-index:2000;
+  display:inline-block;
+  // grid-template-columns: 20px 420px;
   // justify-items: center;
   // margin: 0.25rem;
+  background-color:$page-background;
+  border-width:0 0 1px 0;
+  // border-radius:20px;
+  border-style:solid;
+  // text-align:justify;
 }
 
-.play, .pause, .download-link, .progress-bar {
+.audioplayer .post-title, .download-link{
+  display:inline-block;
+  margin:0;
   padding:0.5rem;
-  text-align:center;
+  // text-align:center;
+  // grid-row:1;
 }
 
+.audioplayer .post-title {
+  text-align:left;
+}
 .pButton:hover {
   cursor:pointer;
 }
 
 .download-link {
-  grid-column: 3;
+  float:right;
 }
 
-.audioplayer{
-  width: 600px;
-  // height: 75px;
-  // margin: 50px auto auto auto;
-  // border: solid;
-  text-align:center;
-}
+
+
  
 // .play{
 //   border: none;
@@ -305,14 +315,20 @@ audio {
  
 .timeline{
   align-self:center;
-  margin-left:10px
+  margin-left:10px;
+  background-color:rgba(0,0,0,1);
+  margin-top:11px;
+  margin-bottom:12px;
+  width: 400px;
   // width: 400px;
-  // height: 20px;
+  height: 1px;
   // margin-top: 20px;
   // float: left;
   // border-radius: 15px;
   // border: black 1px solid;
   // display: block;
+  align-items:center;
+  
   // background-color: rgb(43,194,83);
   // background-image: linear-gradient(
   //   center bottom,
@@ -324,14 +340,28 @@ audio {
   //   inset 0 -2px 6px rgba(0,0,0,0.4);
   // position: relative;
 }
+
+// .playheadPath {
+//   // display:inline-block;
+//   margin-top:11px;
+//   margin-bottom:12px;
+//   width: 400px;
+//   height:24px;
+//   // align-self:center;
+//   background-color: $text-color;
+// }
  
 .playhead{
-  align-self:center;
+  // align-self:center;
+  // position:absolute;
+  margin-top:-11px;
+  // margin-bottom:12px;
   width: 2px;
   height: 24px;
+  display:flex;
   // border-radius: 50%;
   // margin-top:  1px;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 1);
 }
 
 /* end audio player styling */

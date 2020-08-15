@@ -109,6 +109,14 @@ displays links in vertial list */
   form button {
     font-size:1.25rem;
   }
+
+  .post-container.audio {
+    width:100%!important;
+    
+  }
+  .green-audio-player {
+    min-width:310px!important;
+  }
 }
 
 @media screen and (max-width:900px) {

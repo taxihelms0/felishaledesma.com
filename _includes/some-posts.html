@@ -1,47 +1,60 @@
+<link rel="stylesheet" type="text/css" href="assets/css/green-audio-player.css">
 <div class="container">
   {% for post in site.posts %}
-    <div class="grid-container hoverable" id="{{ post.title | slugify }}">
-      <div class="grid-item post-title">{{ post.title }}</div>
-      {% if post.type == 'audio' and post.mediaFile %}
-      <div class="grid-item post-audio">
-        <!-- old audio player code -->
-        <!-- <audio controls {% if !post.downloadable %}controlsList="nodownload"{% endif %}>
-          <source src="{{ post.mediaFile }}" preload="auto">
-          Sorry, your browser does not support the audio player!
-        </audio> -->
-        <!-- new audio player code -->
-        <div class="audioplayer" id="{{ post.mediaFile }}">
-          <div id="{{ post.title | slugify }}-pButton" class="play">
-            <i class="fa fa-play" aria-label="Play"></i>
-          </div>
-          <div id="timeline-{{ post.title | slugify }}" class="timeline">
-            <div id="{{ post.title | slugify }}-playhead" class="playhead"></div>
-          </div>
-          {% if post.downloadable %}
-          <div class="download-link">
-            <a href="{{post.mediaFile}}" download>download</a>
-          </div>
-          {% endif %}
-          <!-- <audio id="{{ post.title | slugify }}-player" src="{{ post.mediaFile }}" preload = "auto">
-              Sorry, your browser does not support the audio player!
-          </audio> -->
-        </div>
-        <!--  -->
+    <!-- <div class="grid-container hoverable" id="{{ post.title | slugify }}"> -->
+      <!-- <div class="grid-item post-title">{{ post.title }}</div> -->
 
-        
+      {% if post.type == 'audio' %}
+      <div class="audioplayer" id="{{ post.mediaFile }}">
+        <div class="post-title">
+          {{ post.title }}
+        </div>
+        {% if post.downloadable %}
+              <div class="download-link">
+                <a href="{{post.mediaFile}}" download><i class="fa fa-download" aria-label="Download"></i></i></a>
+              </div>
+              {% endif %}
+        <div class="player">
+          <audio crossorigin>
+            <source src="{{post.mediaFile}}" type="audio/mpeg" preload="auto">
+          </audio>
+        </div>
+
       </div>
       {% else %}
       <div class="grid-item post-excerpt">{{ post.excerpt | strip_html }}</div>
       <!-- <div class="grid-item post-date">{{ post.date | date_to_string }}</div> -->
       {% endif %}
-    </div>
+    <!-- </div> -->
     <div class="section collapsible collapsed" id ="{{ post.title | slugify }}-content">
       {% if post.excerpt contains "://" %}{{ post.content }}{% else %}{{ post.content | remove_first: post.excerpt }}{% endif %}
     </div>
   {% endfor %}
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.js"></script>
+<script src="assets/js/green-audio-player.js"></script>
+<script>
+  // audio player stuff
+  document.addEventListener('DOMContentLoaded', function() {
+    // GreenAudioPlayer.init({
+    //   selector: '.player',
+    //   stopOthersOnPlay: true
+    //   });
+    GreenAudioPlayer.init({
+      selector: '.player',
+        stopOthersOnPlay: true,
+        // showDownloadButton: true,
+        enableKeystrokes: true
+    });
+
+    // GreenAudioPlayer.init({
+    //   selector: '.player-with-accessibility',
+    //   stopOthersOnPlay: true,
+    //   enableKeystrokes: true
+    // });
+  });
+
+</script>
 <script>
   const tracks = document.querySelectorAll('.audioplayer');
 
