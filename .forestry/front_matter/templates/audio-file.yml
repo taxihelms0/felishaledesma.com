@@ -5,15 +5,29 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: datetime
   name: date
   label: date
-- type: text
-  name: type
+  config:
+    required: true
+    date_format: YYYY-MM-DD
+  default: now
+- name: type
+  type: text
+  config:
+    required: true
   label: type
-- type: text
-  name: mediaFile
-  label: mediaFile
+  hidden: true
+  default: audio
+- name: mediaFile
+  type: file
+  config:
+    maxSize: 64
+  label: Audio File Upload
+  description: upload your audio files. WAV/AIFF files are too large so only upload
+    Mp3 files.
 - type: boolean
   name: downloadable
   label: downloadable
