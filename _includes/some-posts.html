@@ -36,26 +36,18 @@
 <script>
   // audio player stuff
   document.addEventListener('DOMContentLoaded', function() {
-    // GreenAudioPlayer.init({
-    //   selector: '.player',
-    //   stopOthersOnPlay: true
-    //   });
+
     GreenAudioPlayer.init({
       selector: '.player',
       stopOthersOnPlay: true,
       showTooltips: true,
       enableKeystrokes: true
     });
-
-    // GreenAudioPlayer.init({
-    //   selector: '.player-with-accessibility',
-    //   stopOthersOnPlay: true,
-    //   enableKeystrokes: true
-    // });
+    // myAudio.addEventListener('canplaythrough', soundLoaded, false);
   });
 
 </script>
-<script>
+<!-- <script>
   const tracks = document.querySelectorAll('.audioplayer');
 
   function playButton(track) {
@@ -88,4 +80,4 @@
   });
 
   // const pButtons = document.querySelectorAll('')
-</script>
+</script> -->
