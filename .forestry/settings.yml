@@ -10,11 +10,6 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-- type: directory
-  path: _authors
-  label: Authors
-  create: all
-  match: "**/*"
 upload_dir: media
 public_path: "/media"
 front_matter_path: ''
