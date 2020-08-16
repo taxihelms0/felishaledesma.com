@@ -1,0 +1,19 @@
+---
+label: Audio File
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: type
+  label: type
+- type: text
+  name: mediaFile
+  label: mediaFile
+- type: boolean
+  name: downloadable
+  label: downloadable

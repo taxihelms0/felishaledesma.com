@@ -28,5 +28,3 @@ fields:
   config: {}
   label: media file(s)
   description: upload media file(s) here
-pages:
-- _posts/media-files-test.md
