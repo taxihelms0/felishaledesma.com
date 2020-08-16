@@ -27,9 +27,11 @@
   function toggleForm() {
     if (contactForm.style.maxHeight !== '516px') {
       contactForm.style.maxHeight = '516px';
+
       document.querySelector('#arrow').innerHTML = '<i class="fa fa-long-arrow-down" aria-hidden="true"></i>';
     } else {
       contactForm.style.maxHeight = '0';
+
       document.querySelector('#arrow').innerHTML = '<i class="fa fa-long-arrow-up" aria-hidden="true"></i>';
       
     } 

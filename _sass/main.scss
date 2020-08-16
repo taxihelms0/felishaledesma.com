@@ -92,6 +92,15 @@ a:hover {
   padding:0 1rem 0 1rem;
 }
 
+.centered {
+  padding: 125px 0;
+  align-items: center;
+  text-align: center;
+  font-size: 200%;
+}
+
+
+
 /* end global stuff */
 
 // /* Begin Nav Bar Styling */
@@ -118,7 +127,7 @@ a:hover {
   display: block;
   color: $link-color;
   text-align: left;
-  padding-left:1rem;
+  padding:0 1rem;
   text-decoration: none;
   font-size: 3.5rem;
 }
@@ -155,7 +164,7 @@ a:hover {
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
-  padding-left:0;
+  padding:0;
 }
 /* adjust content height to account for nav */
 .content { // default height
@@ -411,7 +420,6 @@ form {
   text-align:left;
   padding-top:1.25rem;
   padding-inline-start:0;
-  margin-top:2rem;
 }
 
 .content form input, textarea{
