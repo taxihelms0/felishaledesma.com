@@ -31,3 +31,5 @@ fields:
 - type: boolean
   name: downloadable
   label: downloadable
+pages:
+- _posts/felisha-ledesma-angelo-harmsworth-pda.md
