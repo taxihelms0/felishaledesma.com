@@ -30,13 +30,13 @@ _Thursday_ _29th, $15-30_
 
 **Introduction to modular synthesis with Automatonism (2 part workshop)**
 
-_Saturday 7 + Saturday 14,_  $30-50
+_Sunday 8th + Sunday 15th,_  $30-50
 
 _access to a group slack for the week between classes to ask questions/share with the group_
 
 **Experimenting & Processing Samples in Automatonism**
 
-_Saturday 21st, $15-30_
+_Friday 20th, $15-30_
 
 **Exploring Control Voltage and Modulation in Automatonism**
 
