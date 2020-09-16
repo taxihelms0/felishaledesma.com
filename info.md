@@ -13,8 +13,8 @@ Felisha Ledesma is an artist and educator based in Berlin, currently receiving a
 
 ##### **October**
 
-**Introduction to Modular Synthesis with Automatonism** _(_**2 part workshop)**_  
-Saturday 17th + Sunday 24th, $30-50_
+**Introduction to Modular Synthesis with Automatonism** _(_**2 part workshop)**  
+Saturday 17th + Sunday 24th, $30-50
 
 _access to a group slack for the week between classes to ask questions/share with the group. $30-50_
 
