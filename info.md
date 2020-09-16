@@ -4,49 +4,41 @@ layout: info
 published: false
 
 ---
-Felisha Ledesma is an artist and educator based in Berlin, currently receiving an M.A.  in Sound Studies and Sonic Arts.
+Felisha Ledesma is an artist and educator based in Berlin, currently receiving an M.A. in Sound Studies and Sonic Arts.
 
-**Upcoming Workshops**
+\-
 
-_Sign ups available shortly_
+#### **Upcoming Workshops**
 
-**Introduction to Modular Synthesis with Automatonism *2 par_kshop*_**_  
-Sund + Sunday 11th_
+#### _Sign ups available shortly_
 
-_access to a group slack for the week between classes to ask questions/share with the group._
+##### **October**
 
-_$30-50_
+**Introduction to Modular Synthesis with Automatonism *2 part workshop***_  
+Saturday 17th + Sunday 24th, $30-50_
 
-Experimenting & Processing Samples in Automatonism
+_access to a group slack for the week between classes to ask questions/share with the group. $30-50_
 
-_Sunday_ _18th_
+**Experimenting & Processing Samples in Automatonism**
 
-_$15-30_
+_Sunday_ _25th, $15-30_
 
-Exploring Control Voltage and Modulation in Automatonism
+**Exploring Control Voltage and Modulation in Automatonism**
 
-_Sunday_ _25th_
+_Thursday_ _29th, $15-30_
 
-_$15-30_
+##### **November**
 
-November
+__Introduction to modular synthesis with Automatonism *2 part workshop*__
 
-Intro to modular synthesis with Automatonism *2 part workshop*
-
-_Saturday 7 + Saturday 14_
+_Saturday 7 + Saturday 14,_  $30-50
 
 _access to a group slack for the week between classes to ask questions/share with the group_
 
-$30-50
+**Experimenting & Processing Samples in Automatonism**
 
-Experimenting & Processing Samples in Automatonism
+_Saturday 21st, $15-30_
 
-_Saturday 21_
+**Exploring Control Voltage and Modulation in Automatonism**
 
-_$15-30_
-
-Exploring Control Voltage and Modulation in Automatonism
-
-_Saturday_ _28th_
-
-_$15-30_
+_Saturday_ _28th, $15-30_
